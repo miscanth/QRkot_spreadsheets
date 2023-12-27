@@ -70,7 +70,7 @@ async def investment_process(
                 obj_in.invested_amount = obj_in.invested_amount + obj_balance
                 await close_process(obj)
             elif obj_balance == obj_in_balance:
-                    await close_process(obj)
-                    await close_process(obj_in)
+                await close_process(obj)
+                await close_process(obj_in)
             session.add(obj, obj_in)
     await session.commit()
