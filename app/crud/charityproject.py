@@ -39,8 +39,7 @@ class CRUDCharityProject(CRUDBase):
                         CharityProject.fully_invested == 1
             ).order_by(fundraising_time)
         )
-        db_closed_projects = db_closed_projects.all()
-        return db_closed_projects
+        return db_closed_projects.all()
 
 
 project_crud = CRUDCharityProject(CharityProject)
